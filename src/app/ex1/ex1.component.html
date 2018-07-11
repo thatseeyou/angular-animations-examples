@@ -1,0 +1,15 @@
+<nav>
+  <a routerLink="master" routerLinkActive="active">Master</a>
+  <a routerLink="detail" routerLinkActive="active">Detail</a>
+</nav>
+<!--
+  trigger의 state가 변경이 되어야 animation이 수행되기 때문에 path 정보를 state로 사용했다.
+  https://medium.com/google-developer-experts/angular-supercharge-your-router-transitions-using-new-animation-features-v4-3-3eb341ede6c8
+  위의 코드에서는 route 설정에서 custom data를 기록하고 그 정보를 이용하고 있는데 여기서는 template에서 끝날 수 있도록 변경했다.
+-->
+<main [@transitionAnimation]="o.activatedRoute.snapshot.url.join('')">
+  <!-- <router-outlet #o="outlet">{{ o.activatedRoute.snapshot.url.join('') }}</router-outlet> -->
+  <!-- exportAs outlet으로 routerOutlet directive가 정의되어 있다. -->
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+

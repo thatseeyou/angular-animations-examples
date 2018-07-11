@@ -1,0 +1,17 @@
+.redbox, .bluebox {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.redbox {
+  background-color: rgba(194, 65, 65, 0.7);
+}
+
+.bluebox {
+  background-color: rgba(65, 117, 194, 0.7);
+}
+
+.greenbox {
+  background-color: rgba(65, 194, 82, 0.7);
+}

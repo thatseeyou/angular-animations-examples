@@ -1,0 +1,10 @@
+<div [@queryAnimation]="state" class="greenbox">
+  {{state}}
+  <div class="redbox clockwise">CW</div>
+  <div class="bluebox counterclockwise">CCW</div>
+  <div [@nestedAnimation]="state" class="redbox">Nested CW</div>
+  <div class="bluebox counterclockwise">CCW</div>
+</div>
+
+<button (click)="onRotate()">Rotate</button>
+<button (click)="onInit()">Init</button>
